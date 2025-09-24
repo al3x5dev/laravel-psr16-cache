@@ -9,13 +9,13 @@ Una implementación simple y elegante del estándar PSR-16 para Laravel, permiti
 ## 📦 Instalación
 
 ```bash
-composer require mk4u/laravel-psr16-cache
+composer require al3x5/laravel-psr16-cache
 ```
 
 ## 🚀 Uso Rápido
 
 ```php
-use Mk4U\LaravelCache\LaravelPsr16Cache;
+use Al3x5\LaravelPsr16Cache;
 
 $cache = new LaravelPsr16Cache();
 
