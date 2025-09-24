@@ -1,6 +1,6 @@
 <?php
 
-namespace Mk4U\LaravelCache;
+namespace Al3x5;
 
 use Illuminate\Support\Facades\Cache;
 use Psr\SimpleCache\CacheInterface;
