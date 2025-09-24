@@ -95,7 +95,7 @@ class UserService
 ## 🔗 Relacionado
 
 **Para proyectos PHP sin Laravel:**  
-👉 [mk4u/cache](https://github.com/al3x5dev/cache) - Implementación simple con drivers APCu y File
+👉 [mk4u/cache](https://github.com/al3x5dev/cache) - Implementación simple con drivers APCu, File y más.
 
 ## 📄 Licencia
 
