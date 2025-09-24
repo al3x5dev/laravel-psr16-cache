@@ -1,0 +1,17 @@
+{
+    "name": "mk4u/laravel-psr16-cache",
+    "description": "PSR-16 Simple Cache implementation for Laravel - Redis, Memcached, File drivers",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "psr/simple-cache": "^3.0",
+        "illuminate/cache": "^12.0",
+        "illuminate/support": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mk4U\\LaravelCache\\": "src/"
+        }
+    }
+}
