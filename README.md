@@ -1,61 +1,59 @@
 # Laravel PSR-16 Cache
 
-**PSR-16 Simple Cache implementation for Laravel projects**
-
-Una implementación simple y elegante del estándar PSR-16 para Laravel, permitiendo usar Redis, Memcached, File y todos los drivers de cache de Laravel con una interfaz estandarizada.
+A simple and elegant implementation of the PSR-16 standard for Laravel, allowing you to use Redis, Memcached, File, and all Laravel cache drivers with a standardized interface.
 
 ---
 
-## 📦 Instalación
+## 📦 Install
 
 ```bash
 composer require al3x5/laravel-psr16-cache
 ```
 
-## 🚀 Uso Rápido
+## 🚀 Quick Use
 
 ```php
 use Al3x5\LaravelPsr16Cache;
 
 $cache = new LaravelPsr16Cache();
 
-// Almacenar valor
+// Save data
 $cache->set('user:1', ['name' => 'Juan'], 3600);
 
-// Recuperar valor
+// Get data
 $user = $cache->get('user:1', 'default_value');
 
-// Verificar existencia
+// Check
 if ($cache->has('user:1')) {
-    // Hacer algo
+    // Do something
 }
 
-// Eliminar
+// Remove
 $cache->delete('user:1');
 ```
 
-## 💡 Características
+## 💡 Features
 
-- ✅ **Implementación PSR-16 completa**
-- ✅ **Soporte para todos los drivers de Laravel** (Redis, Memcached, File, Database, etc.)
-- ✅ **Configuración automática** mediante Laravel
-- ✅ **Interfaz simple y estandarizada**
-- ✅ **Ideal para librerías y packages** que requieran PSR-16
+- ✅ **Full PSR-16 Implementation**
+- ✅ **Support for all Laravel cache drivers** (Redis, Memcached, File, Database, etc.)
+- ✅ **Automatic Configuration** via Laravel
+- ✅ **Simple and Standardized Interface**
+- ✅ **Ideal for Libraries and Packages** that require PSR-16
 
-## 🔧 Configuración
+## 🔧 Configuration
 
-La librería utiliza automáticamente la configuración de cache de tu proyecto Laravel (`config/cache.php`). Simplemente configura tus drivers preferidos:
+The library automatically uses your Laravel project's cache configuration (`config/cache.php`). Simply configure your preferred cache drivers:
 
 ```php
 // .env
 CACHE_DRIVER=redis
-# o
+# or
 CACHE_DRIVER=memcached
-# o  
+# or
 CACHE_DRIVER=file
 ```
 
-## 📚 Métodos Disponibles
+## 📚 Available Methods
 
 ```php
 $cache->get($key, $default = null);
@@ -68,7 +66,7 @@ $cache->deleteMultiple($keys);
 $cache->has($key);
 ```
 
-## 🔄 Uso con Inyección de Dependencias
+## 🔄 Usage with Dependency Injection
 
 ```php
 use Psr\SimpleCache\CacheInterface;
@@ -86,17 +84,17 @@ class UserService
 }
 ```
 
-## 📋 Requisitos
+## 📋 Requirements
 
-- PHP 8.2 o superior
+- PHP 8.2 or higher
 - Laravel 12.x
-- Extensión Redis o Memcached (opcional, según driver)
+- Redis or Memcached extension (optional, depending on the driver)
 
-## 🔗 Relacionado
+## 🔗 Related
 
-**Para proyectos PHP sin Laravel:**  
-👉 [mk4u/cache](https://github.com/al3x5dev/cache) - Implementación simple con drivers APCu, File y más.
+**For PHP projects without Laravel:**
+👉 [mk4u/cache](https://github.com/al3x5dev/cache) - Simple implementation with APCu, File, and other drivers.
 
-## 📄 Licencia
+## 📄 License
 
-MIT License - ver archivo LICENSE para más detalles.
+MIT License - see the LICENSE file for details.
